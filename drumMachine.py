@@ -1,4 +1,3 @@
-
 from earsketch import *
 
 init()
@@ -8,8 +7,7 @@ setTempo(100)
 kick = CIARA_SET_KICK_1
 snare = HIPHOP_SNARE_ROLL_007
 hihat = CIARA_SET_PERC_HIHAT_1
-bass1 = CIARA_SET_BASSLINE_1
-bass2 = CIARA_SET_BASSLINE_2
+theme = CIARA_SET_THEME_ATMOS_1
 
 # beat patterns
 kickPatternAlt = "0-0-----0-0-----"    
@@ -26,25 +24,25 @@ def addBeatLoop(beat, sound, track, startMeasure, numMeasures):
 addBeatLoop(kickPatternAlt, kick, 1, 1, 2)
 addBeatLoop(snarePatternAlt, snare, 2, 1, 2)
 addBeatLoop(hihatPattern2, hihat, 3, 1, 2)
-fitMedia(bass1, 4, 1, 3)
+fitMedia(theme, 4, 1, 3)
 
 # M 3–4: stop hi-hat for a break
 addBeatLoop(kickPatternAlt, kick, 1, 3, 2)
 addBeatLoop(snarePatternAlt, snare, 2, 3, 2)
 # No hi-hat
-fitMedia(bass2, 4, 3, 5)
+fitMedia(theme, 4, 3, 5)
 
 # M 5–6: bring hihat back
 addBeatLoop(kickPatternAlt, kick, 1, 5, 2)
 addBeatLoop(snarePatternAlt, snare, 2, 5, 2)
 addBeatLoop(hihatPattern1, hihat, 3, 5, 2)
-fitMedia(bass1, 4, 5, 7)
+fitMedia(theme, 4, 5, 7)
 
 # M 7–8: switch hi-hat again
 addBeatLoop(kickPatternAlt, kick, 1, 7, 2)
 addBeatLoop(snarePatternAlt, snare, 2, 7, 2)
 addBeatLoop(hihatPattern2, hihat, 3, 7, 2)
-fitMedia(bass2, 4, 7, 9)
+fitMedia(theme, 4, 7, 9)
 
 # sound effects
 setEffect(1, VOLUME, GAIN, 5)
